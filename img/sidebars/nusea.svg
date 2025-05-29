@@ -1,0 +1,47 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created using Krita: https://krita.org -->
+<svg xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:krita="http://krita.org/namespaces/svg/krita"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    width="38.4pt"
+    height="38.4pt"
+    viewBox="0 0 38.4 38.4">
+<defs/>
+<g id="layer1" transform="matrix(0.12 0 0 0.12 0 0)" fill="none">
+  <g id="g8244" fill="none"/>
+  <g id="layer2" fill="none">
+   <g id="layer3" fill="none">
+    <g id="g9745" fill="none">
+     <path id="path9640" transform="translate(160, 80)" fill="#ff9090" stroke-opacity="0" stroke="#000000" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" d="M53.333 80L80 0L0 80Z" sodipodi:nodetypes="cccc"/>
+     <path id="path9638" transform="translate(160, 160)" fill="#ff9090" stroke-opacity="0" stroke="#000000" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" d="M0 53.333L80 80L0 0Z" sodipodi:nodetypes="cccc"/>
+     <path id="path9611" transform="translate(80, 160)" fill="#ff9090" stroke-opacity="0" stroke="#000000" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" d="M26.667 0L0 80L80 0Z" sodipodi:nodetypes="cccc"/>
+     <path id="path8551" transform="translate(80, 80)" fill="#ff9090" stroke-opacity="0" stroke="#000000" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" d="M80 26.667L0 0L80 80Z" sodipodi:nodetypes="cccc"/>
+    </g>
+    <g id="g9734" transform="matrix(0 -1 -1 0 320 320)" fill="none">
+     <path id="path9720" transform="translate(160, 79.9999999999999)" fill="#d36969" stroke-opacity="0" stroke="#000000" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" d="M53.333 80L80 0L0 80Z" sodipodi:nodetypes="cccc"/>
+     <path id="path9722" transform="translate(160, 160)" fill="#d36969" stroke-opacity="0" stroke="#000000" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" d="M0 53.333L80 80L0 0Z" sodipodi:nodetypes="cccc"/>
+     <path id="path9724" transform="translate(79.9999999999999, 160)" fill="#d36969" stroke-opacity="0" stroke="#000000" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" d="M26.667 0L0 80L80 0Z" sodipodi:nodetypes="cccc"/>
+     <path id="path9726" transform="translate(80, 80)" fill="#d36969" stroke-opacity="0" stroke="#000000" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" d="M80 26.667L0 0L80 80Z" sodipodi:nodetypes="cccc"/>
+    </g>
+   </g>
+   <g id="layer6" fill="none">
+    <g id="layer7" fill="none">
+     <path id="path9836" transform="translate(128, 0)" fill="#69d3d3" stroke-opacity="0" stroke="#000000" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" d="M0 96L32 0L32 106.667Z" sodipodi:nodetypes="cccc"/>
+     <path id="path9862" transform="translate(0, 160)" fill="#69d3d3" stroke-opacity="0" stroke="#000000" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" d="M96 32L0 0L106.667 0Z" sodipodi:nodetypes="cccc"/>
+     <path id="path9864" transform="translate(160, 213.333)" fill="#69d3d3" stroke-opacity="0" stroke="#000000" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" d="M32 10.667L0 106.667L0 0Z" sodipodi:nodetypes="cccc"/>
+     <path id="path9866" transform="translate(213.333, 128)" fill="#69d3d3" stroke-opacity="0" stroke="#000000" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" d="M10.667 0L106.667 32L0 32Z" sodipodi:nodetypes="cccc"/>
+    </g>
+    <g id="g9882" transform="matrix(-1 0 0 1 320 0)" fill="none">
+     <path id="path9874" transform="translate(128, 0)" fill="#90ffff" stroke-opacity="0" stroke="#000000" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" d="M0 96L32 0L32 106.667Z" sodipodi:nodetypes="cccc"/>
+     <path id="path9876" transform="translate(0, 160)" fill="#90ffff" stroke-opacity="0" stroke="#000000" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" d="M96 32L0 0L106.667 0Z" sodipodi:nodetypes="cccc"/>
+     <path id="path9878" transform="translate(160, 213.333)" fill="#90ffff" stroke-opacity="0" stroke="#000000" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" d="M32 10.667L0 106.667L0 0Z" sodipodi:nodetypes="cccc"/>
+     <path id="path9880" transform="translate(213.333, 128)" fill="#90ffff" stroke-opacity="0" stroke="#000000" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" d="M10.667 0L106.667 32L0 32Z" sodipodi:nodetypes="cccc"/>
+    </g>
+   </g>
+  </g>
+  <path id="path8289" transform="translate(80.0000010000001, 80.0000010000001)" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="4" d="M0 160L26.6666 80L0 0L80 26.667L160 0L133.332 80L160.002 160L80 133.333Z" sodipodi:nodetypes="ccccccccc"/>
+  <path id="path6041" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="4" d="M224 128L320 160L224 192L213.332 160ZM128 96L160 0L192 96L160 106.667ZM192 224L160 320L128 224L160 213.332ZM96 192L0 160L96 128L106.667 160Z" sodipodi:nodetypes="cccccccccccccccccccc"/>
+ </g>
+</svg>

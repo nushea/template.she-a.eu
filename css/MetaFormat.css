@@ -1,0 +1,177 @@
+@font-face {
+    font-family: 'FavFont';
+    src: url('https://she-a.eu/FavFont.ttf') format('truetype');
+}
+
+body {
+    background-color: #1e1e2e;
+    color: rgb(204,214,244);
+    font-size: 2vw;
+    font-family: 'FavFont', sans-serif;
+
+    width: 100%;
+    height: 100%;
+    margin: 0;
+	padding: 0;
+}
+#Items {
+    display: flex;
+	width: 100vw;
+}
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	display:flex;
+	flex-direction: column;
+}
+p {
+	margin: 0;
+}
+a {
+    display: flex;
+    align-items: center;
+    color: rgb(234, 118, 203);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(136, 57, 239);
+}
+
+iframe {
+
+	width: 90%;
+	height: 90%;
+	border: none;
+}
+
+#Left {
+    background-color: rgb(17, 17, 27);
+
+	display: flex;
+    flex: none;
+	
+    height: 100vh;
+    width: 12vw;
+}
+
+.LeftImage {
+	width: 5vw;
+}
+
+#Middle {
+	
+	display: flex;
+	justify-content: center;
+	flex: 1 1 auto;
+}
+
+#Middle>ul {
+	width: 100%;
+	height: unset;
+}
+
+
+#Right {
+    background-color: #161624;
+	display: flex;
+    flex: none;
+    width: 12vw;
+}
+#Right>ul {
+	justify-content: space-between;
+	width: 100%;
+	text-align: center;
+	margin-top: 2vh;
+	margin-bottom: 2vh;
+}
+
+#Upper {
+	position: relative;
+	text-align: center;
+	height: 50vh;
+	font-size: 3vw;
+}
+
+#Lower {
+	height: 100%;
+	display:flex;
+	justify-content: center;
+}
+#Lower>p {
+	text-align: justify;
+}
+#ItemText {
+	font-size: 1.8vw;
+}
+#metaMap {
+	height: 50vh;
+	width: unset;
+}
+#RegionTable {
+	display: flex;
+	flex-direction: column;
+	margin-top: 10vh;
+	font-size: 1.5vw;
+}
+.NSitem {
+	border: 1px solid #000;
+	width: 7.5vw;
+}
+.GroupItem {
+	margin: 0px;
+	display: flex;
+	flex-direction: row;
+}
+
+@media (max-aspect-ratio: 1) {
+    #Items {
+        flex-direction: column;
+		height: 100dvh;
+    }
+
+    #Left {
+        width: 100%;
+        height: 6.25vh;
+    }
+
+    #Left>ul {
+        flex-direction: row;
+    }
+	.LeftText {
+		display: none;
+	}
+	.LeftImage {
+		height: 6.25vh;
+		width: unset;
+	}
+
+    #Right {
+        width: 100%;
+        height: 12.5vh;
+    }
+
+    #Right>ul {
+        flex-direction: row;
+		justify-content: space-around;
+		font-size:1.8vh;
+    }
+	
+	#metaMap {
+		height:unset;
+		width: 80%;
+	}
+	
+	iframe {
+
+		width: 90%;
+		height: 100%;
+		border: none;
+	}
+
+	#ItemText {
+		font-size: 3vh;
+	}
+}
