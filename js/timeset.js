@@ -2,7 +2,7 @@ var currentDate = new Date();
 
 // load the wasm module
 var script = document.createElement('script');
-script.src = 'https://texts.she-a.eu/MetaPages/js/time.js';
+script.src = 'https://template.she-a.eu/js/time.js';
 document.head.appendChild(script);
 var curtime;
 
