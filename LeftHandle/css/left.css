@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'FavFont';
+    src: url('https://she-a.eu/FavFont.ttf') format('truetype');
+}
+
+body {
+    background-color: rgb(17, 17, 27);
+    font-family: 'FavFont', sans-serif;
+
+    width: 100%;
+    height: 100%;
+    margin: 0;
+	padding: 0;
+}
+
+#RegionHandle {
+    background-color: rgb(17, 17, 27);
+
+	display: flex;
+    flex: none;
+	width: 100%;
+	height: 100%;
+}
+
+
+@media (max-aspect-ratio: 1) {
+
+
+    #RegionHandle {
+        width: unset;
+        height: 100vh;
+    }
+
+    #RegionHandle>ul {
+        flex-direction: column;
+		font-size: 17vw;
+    }
+	.LeftText {
+		display: unset;
+	}
+	.LeftImage {
+		height: unset;
+		width: 41vw;
+	}
+
+}
+@media (min-aspect-ratio: 1) {
+
+
+    #RegionHandle {
+        width: 100%;
+        height: 6.25vh;
+    }
+
+    #RegionHandle>ul {
+        flex-direction: row;
+    }
+	.LeftText {
+		display: none;
+	}
+	.LeftImage {
+		height: 100vh;
+		width: unset;
+	}
+
+}
+
