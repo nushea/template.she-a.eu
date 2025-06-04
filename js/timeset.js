@@ -11,7 +11,7 @@ divt.innerHTML = "HaYi Time";
 
 var loct = document.getElementById('LocalTime');
 loct.innerHTML = "Local Time";
-
+/*
 script.onload = () => {
     Module.onRuntimeInitialized = () => {
         
@@ -51,4 +51,25 @@ var checkWasmReady = setInterval(() => {
 		else i*=16;
     }
 }, 0);
+*/
+// Time handling
 
+onWASMLoad(CyraTime, (CyraTime) => {
+    if (CyraTime) {
+        const curtime = CyraTime.cwrap("curtime", null, ["number"]);
+        const updateTime = () => {
+            const outputBytes = CyraTime._malloc(50);
+            curtime(outputBytes);
+            /** @type string */
+            const output = CyraTime.UTF8ToString(outputBytes).slice(0, -1);
+            CyraTime._free(outputBytes);
+			
+			console.log(output);
+        };
+        updateTime();
+        setInterval(updateTime, 1000);
+    }
+    globe.startRendering();
+}, {
+    arguments: ["e"],
+});
