@@ -11,65 +11,47 @@ divt.innerHTML = "HaYi Time";
 
 var loct = document.getElementById('LocalTime');
 loct.innerHTML = "Local Time";
-/*
-script.onload = () => {
-    Module.onRuntimeInitialized = () => {
-        
-		curtime = Module.cwrap('curtime', null, ['number']);
-    };
-};
 
-var i = 0;
-
-var checkWasmReady = setInterval(() => {
-    if (curtime) {
-		currentDate = new Date();
-		const year = currentDate.getFullYear();
-		const month = currentDate.getMonth() + 1;
-		const day = currentDate.getDate();
-		const hours = currentDate.getHours();
-		const minutes = currentDate.getMinutes();
-		const seconds = currentDate.getSeconds();
-		loct.innerHTML = "<p> Local Time: </p>" +
-						 "<p>" + year + "/" + month  + "/" + day+
-						 "<p>" + hours + ":" + minutes  + ":" + seconds;
-
-		var oup = Module._malloc(50);
-		curtime(oup);
-		var outputString = Module.UTF8ToString(oup);
-		if(outputString.charAt(outputString.length - 3) == ':')
-			outputString = outputString.substring(0, outputString.length - 2) + '0' + outputString.charAt(outputString.length - 2);
-		outputString = "<p> HaYi Time: </p>" +
-					   "<p>" + outputString.substring(0, outputString.indexOf(' ')) + "</p>" + 
-			           "<p>" + outputString.substring(outputString.indexOf(' ')+1) + "</p>";
-		divt.innerHTML = outputString;
-	        
-
-        Module._free(oup);
-    } else {
-		if(i == 0) i = 1;
-		else i*=16;
-    }
-}, 0);
-*/
 // Time handling
 
 onWASMLoad(CyraTime, (CyraTime) => {
     if (CyraTime) {
         const curtime = CyraTime.cwrap("curtime", null, ["number"]);
         const updateTime = () => {
+
+                        currentDate = new Date();
+                        const year = currentDate.getFullYear();
+                        const month = currentDate.getMonth() + 1;
+                        const day = currentDate.getDate();
+                        const hours = currentDate.getHours();
+                        const minutes = currentDate.getMinutes();
+                        const seconds = currentDate.getSeconds();
+                        if(seconds < 10)
+                                loct.innerHTML = "<p> Local Time: </p>" +
+                                                                 "<p>" + year + "/" + month  + "/" + day+
+                                                                 "<p>" + hours + ":" + minutes  + ":0"+ seconds;
+                        else
+                                loct.innerHTML = "<p> Local Time: </p>" +
+                                                                 "<p>" + year + "/" + month  + "/" + day+
+                                                                 "<p>" + hours + ":" + minutes  + ":" + seconds;
+
             const outputBytes = CyraTime._malloc(50);
             curtime(outputBytes);
             /** @type string */
-            const output = CyraTime.UTF8ToString(outputBytes).slice(0, -1);
+            var output = CyraTime.UTF8ToString(outputBytes).slice(0, -1);
             CyraTime._free(outputBytes);
-			
-			console.log(output);
+                
+                        if(output.charAt(output.length - 2) == ':')
+                                output = output.substring(0, output.length - 1) + '0' + output.charAt(output.length - 1);
+                        const outputString = "<p> HaYi Time: </p>" +
+                                                   "<p>" + output.substring(0, output.indexOf(' ')) + "</p>" + 
+                                                   "<p>" + output.substring(output.indexOf(' ')+1) + "</p>";
+                        divt.innerHTML = outputString;
         };
         updateTime();
         setInterval(updateTime, 1000);
     }
-    globe.startRendering();
 }, {
     arguments: ["e"],
 });
+
