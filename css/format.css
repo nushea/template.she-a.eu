@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'FavFont';
-    src: url('https://she-a.eu/FavFont.ttf') format('truetype');
+    src: url('unifont.bdf') format('truetype');
 }
 
 body {
