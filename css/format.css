@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'FavFont';
-    src: url('unifont.otf') format('opentype');
+    src: url('/unifont.otf') format('opentype');
 }
 @font-face {
     font-family: 'BAU';
-    src: url('BAU.otf') format('opentype');
+    src: url('/BAU.ttf') format('truetype');
 }
 body {
     background-color: #1e1e2e;
