@@ -1,11 +1,11 @@
 @font-face {
-    font-family: 'FavFont';
-    src: url('https://she-a.eu/FavFont.ttf') format('truetype');
+    font-family: 'BAU';
+    src: url('/BAU.otf') format('opentype');
 }
 
 body {
     background-color: rgb(17, 17, 27);
-    font-family: 'FavFont', sans-serif;
+    font-family: 'BAU', sans-serif;
 
     width: 100%;
     height: 100%;
