@@ -126,6 +126,25 @@ iframe {
 	flex-direction: row;
 }
 
+.BauTime {
+	margin-top: 2vh;
+	margin-bottom: 2vh;
+}
+
+.BauTime>p {
+	margin-top: 1vh;
+}
+.TimeSwitches {
+	display: flex;
+	justify-content: center;
+}
+.TimeOption {
+	border: solid rgb(204,214,244);
+	user-select: none;
+	width: 6vh;
+	height: 6vh;
+	background-color: #313244;
+}
 @media (max-aspect-ratio: 1) {
     #Items {
         flex-direction: column;

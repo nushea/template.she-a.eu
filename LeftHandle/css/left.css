@@ -23,7 +23,7 @@ body {
 	height: 100%;
 }
 #RegionHandle>ul {
-	overflow: scroll;
+	overflow-y: auto;
 	overflow-x: hidden;
 	scrollbar-color: rgb(204,214,244) #0e0e16;
 	scrollbar-gutter: stable both-edges;
