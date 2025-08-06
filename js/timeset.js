@@ -11,10 +11,37 @@ var loct = document.getElementById('LocalTime');
 var divb = document.getElementById('HaYiTimeBau');
 var locb = document.getElementById('LocalTimeBau');
 
-showdivt = false;
-showdivb = false;
-showloct = false;
-showlocb = false;
+function getCookie(name) {
+  const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+  return match ? match[2] : null;
+}
+function getBCookie(name) {
+  const val = getCookie(name);
+  return val === "true" ? true
+       : val === "false" ? false
+       : null; // or default
+}
+showloct = getBCookie("showloct");
+showlocb = getBCookie("showlocb");
+showdivt = getBCookie("showdivt");
+showdivb = getBCookie("showdivb");
+
+if(showloct == null && showlocb == null && showdivt == null && showdivb == null){
+	showloct = true;
+	showlocb = false;
+	showdivt = true;
+	showdivb = false;
+}
+
+document.getElementById("TimeLatLat").innerHTML 			= showloct? ""       : "";
+document.getElementById("TimeLatLat").style.backgroundColor =!showloct? "#313244" : "#1e1e2e";
+document.getElementById("TimeLatBau").innerHTML 			= showlocb? ""       : "";
+document.getElementById("TimeLatBau").style.backgroundColor =!showlocb? "#313244" : "#1e1e2e";
+document.getElementById("TimeBauLat").innerHTML 			= showdivt? ""       : "";
+document.getElementById("TimeBauLat").style.backgroundColor =!showdivt? "#313244" : "#1e1e2e";
+document.getElementById("TimeBauBau").innerHTML 			= showdivb? ""       : "";
+document.getElementById("TimeBauBau").style.backgroundColor =!showdivb? "#313244" : "#1e1e2e";
+
 function bauShift(inp){
 	oup ="";
 	for(const c of inp){
@@ -107,14 +134,22 @@ onWASMLoad(CyraTime, (CyraTime) => {
 
 document.querySelectorAll('.TimeOption').forEach(cell => {
     cell.addEventListener('click', () => {
-		if(cell.id == "TimeLatLat")
+		if(cell.id == "TimeLatLat"){
 			showloct = !showloct;
-		if(cell.id == "TimeLatBau")
+			document.cookie = "showloct="+ showloct +"; path=/; domain=.she-a.eu; expires=Fri, 01 Jan 9999 00:00:00 GMT; Secure; SameSite=None";
+		}
+		if(cell.id == "TimeLatBau"){
 			showlocb = !showlocb;
-		if(cell.id == "TimeBauLat")
+			document.cookie = "showlocb="+ showlocb +"; path=/; domain=.she-a.eu; expires=Fri, 01 Jan 9999 00:00:00 GMT; Secure; SameSite=None";
+		}
+		if(cell.id == "TimeBauLat"){
 			showdivt = !showdivt;
-		if(cell.id == "TimeBauBau")
+			document.cookie = "showdivt="+ showdivt +"; path=/; domain=.she-a.eu; expires=Fri, 01 Jan 9999 00:00:00 GMT; Secure; SameSite=None";
+		}
+		if(cell.id == "TimeBauBau"){
 			showdivb = !showdivb;
+			document.cookie = "showdivb="+ showdivb +"; path=/; domain=.she-a.eu; expires=Fri, 01 Jan 9999 00:00:00 GMT; Secure; SameSite=None";
+		}
 		cell.innerHTML = ( cell.innerHTML == ""? "":"");
 		if(cell.innerHTML == "")
 			cell.style.backgroundColor = "#313244";
